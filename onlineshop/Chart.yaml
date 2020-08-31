@@ -3,4 +3,4 @@ name: onlineshop
 description: A Helm chart for Kubernetes
 type: application
 version: 1.0.0
-appVersion: 'sha-7db8499'
+appVersion: 'sha-0898056'
