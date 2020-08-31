@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search-service
+  namespace: preprod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: search-service
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      name: search-service
+      namespace: preprod
+      labels:
+        app: search-service
+    spec:
+      containers:
+        - name: search-service
+          image: docker.pkg.github.com/lhaidacher/search-service/search-service:sha-cf12544
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: search-service
+  namespace: preprod
+spec:
+  type: NodePort
+  selector:
+    app: search-service
+  ports:
+    - protocol: TCP
+      port: 8080
+
