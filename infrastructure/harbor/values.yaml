@@ -1,0 +1,26 @@
+harborAdminPassword: "affe123456"
+fullnameOverride: harbor
+externalURL: https://harbor.lhaidacher.com
+
+service:
+  type: Ingress
+  tls:
+    enabled: true
+    commonName: "harbor.lhaidacher.com"
+
+ingress:
+  enabled: true
+  hosts:
+    core: harbor.lhaidacher.com
+    
+#chartmuseum:
+#  enabled: false
+
+clair:
+  enabled: false
+  
+trivy:
+  enabled: false
+
+notary:
+  enabled: false

@@ -1,0 +1,6 @@
+service:
+  type: "Ingress"
+  ingress:
+    enabled: true
+    hosts:
+      - argocd.lhaidacher.com

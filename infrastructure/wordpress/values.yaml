@@ -1,7 +1,0 @@
-wordpressUsername: helm-user
-wordpressPassword: my-password
-wordpressEmail: helm-user@example.com
-wordpressFirstName: HelmFirst
-wordpressLastName: HelmLast
-wordpressBlogName: Learn Helm!
-replicaCount: 2
