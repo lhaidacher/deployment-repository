@@ -5,7 +5,7 @@
 replicaCount: 3
 
 image:
-  repository: docker.pkg.github.com/lhaidacher/search-service/search-service
+  repository: harbor.lhaidacher.com/library/search-service
   pullPolicy: IfNotPresent
 
 imageCredentials:
